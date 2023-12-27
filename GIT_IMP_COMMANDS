@@ -1,0 +1,207 @@
+
+1. git init: Initialize a new Git repository
+
+   git init
+
+
+2. git clone: Clone a repository into a new directory
+
+   git clone <repository_url>
+
+
+3. git add: Add changes to the staging area
+
+   git add <file1> <file2>   # Add specific files
+   git add .                 # Add all changes
+
+
+4. git commit: Record changes to the repository
+
+   git commit -m "Commit message"
+
+
+5. git status: Show the status of changes as untracked, modified, or staged
+
+   git status
+
+
+6. git pull: Fetch changes from a remote repository and merge them
+
+   git pull origin master
+
+
+7. git push: Push local changes to a remote repository
+
+   git push origin master
+
+
+8. git branch: List, create, or delete branches
+
+   git branch                    # List branches
+   git branch <branch_name>      # Create a new branch
+   git branch -d <branch_name>   # Delete a branch
+
+
+9. git checkout: Switch branches or restore working tree files
+
+   git checkout <branch_name>    # Switch to a branch
+   git checkout -b <new_branch>  # Create and switch to a new branch
+
+
+10. git merge: Merge changes from different branches
+ 
+    git merge <branch_name>
+ 
+
+11. git log: Show the commit logs
+ 
+    git log
+ 
+
+12. git remote: Manage set of tracked repositories
+ 
+    git remote -v              # List remote repositories
+    git remote add origin <repository_url>  # Add a remote repository
+ 
+
+13. git fetch: Download objects and refs from another repository
+ 
+    git fetch origin
+ 
+
+14. git reset: Reset current HEAD to the specified state
+ 
+    git reset --hard HEAD       # Discard all changes
+ 
+
+15. git revert: Create new commit that undoes changes made in a previous commit
+ 
+    git revert <commit_hash>
+ 
+Always be cautious when using commands that modify the commit history, such as "git reset" and "git revert", especially in shared branches.
+
+16. git diff: Show changes between commits, commit and working tree, etc.
+    
+    git diff                  # Show changes in working directory
+    git diff <commit1>..<commit2>  # Show changes between two commits
+   
+
+17. git tag: Create, list, delete, or verify a tag object signed with GPG
+    
+    git tag                    # List tags
+    git tag -a v1.0 -m "Version 1.0"  # Create an annotated tag
+   
+
+18. git remote show: Display information about a remote
+    
+    git remote show origin     # Show information about the remote named 'origin'
+   
+
+19. git log: Show commit logs with additional details
+    
+    git log --oneline          # Compact display of commit messages
+    git log --graph --oneline --all  # Display commit history graph
+   
+
+20. git stash: Stash changes in a dirty working directory
+    
+    git stash                  # Stash changes
+    git stash list             # List stashes
+    git stash apply            # Apply the latest stash
+   
+
+21. git rebase: Forward-port local commits to the updated upstream head
+    
+    git rebase <branch_name>   # Rebase local changes on top of a branch
+   
+
+22. git cherry-pick: Apply changes introduced by some existing commits
+    
+    git cherry-pick <commit_hash>
+   
+
+23. git show: Show various types of objects
+    
+    git show <commit_hash>     # Show details of a commit
+   
+
+24. git fetch --prune: Fetch changes from a remote and prune references to deleted branches
+    
+    git fetch --prune origin   # Prune deleted branches
+   
+
+25. git submodule: Initialize, update or inspect submodules
+    
+    git submodule add <repository_url> <path>  # Add a submodule
+    git submodule update --init --recursive    # Initialize and update submodules
+   
+
+26. git blame: Show what revision and author last modified each line of a file
+    
+    git blame <file_name>      # Show file changes with commit details
+   
+===================
+### Resolving Git Conflicts:
+
+1. git pull --rebase: Pull changes from a remote repository and rebase local changes on top
+    
+    git pull --rebase origin <branch_name>
+
+
+2. git mergetool: Open a visual tool to resolve conflicts
+    
+    git mergetool
+
+
+3. git status: Check the status to see conflicted files
+    
+    git status
+
+
+4. git add: Stage resolved files after conflict resolution
+    
+    git add <resolved_file>
+
+
+5. git rebase --continue: Continue the rebase process after resolving conflicts
+    
+    git rebase --continue
+
+
+6. git rebase --abort: Abort the rebase process and go back to the original state
+    
+    git rebase --abort
+
+
+### Cherry-Picking Changes:
+
+7. git cherry-pick: Apply changes introduced by some existing commits
+    
+    git cherry-pick <commit_hash>
+
+
+8. git cherry-pick -x: Apply changes and mark them as a cherry-pick in the commit message
+    
+    git cherry-pick -x <commit_hash>
+
+
+9. git cherry-pick --continue: Continue the cherry-pick process after resolving conflicts
+    
+    git cherry-pick --continue
+
+
+10. git cherry-pick --abort: Abort the cherry-pick process and return to the original state
+    
+    git cherry-pick --abort
+
+
+11. git log: View commit history to identify commit hashes for cherry-picking
+    
+    git log
+
+
+12. git diff: Compare changes between commits before cherry-picking
+    
+    git diff <source_commit>..<destination_commit>
+
+when resolving conflicts or cherry-picking changes, it's essential to carefully review the changes and ensure that the final result is correct. C
